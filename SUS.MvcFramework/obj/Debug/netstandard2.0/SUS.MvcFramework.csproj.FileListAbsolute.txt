@@ -1,0 +1,12 @@
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\bin\Debug\netstandard2.0\SUS.MvcFramework.deps.json
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\bin\Debug\netstandard2.0\SUS.MvcFramework.dll
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\bin\Debug\netstandard2.0\SUS.MvcFramework.pdb
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\bin\Debug\netstandard2.0\SUS.HTTP.dll
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\bin\Debug\netstandard2.0\SUS.HTTP.pdb
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\obj\Debug\netstandard2.0\SUS.MvcFramework.csprojAssemblyReference.cache
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\obj\Debug\netstandard2.0\SUS.MvcFramework.AssemblyInfoInputs.cache
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\obj\Debug\netstandard2.0\SUS.MvcFramework.AssemblyInfo.cs
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\obj\Debug\netstandard2.0\SUS.MvcFramework.csproj.CoreCompileInputs.cache
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\obj\Debug\netstandard2.0\SUS.MvcFramework.csproj.CopyComplete
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\obj\Debug\netstandard2.0\SUS.MvcFramework.dll
+D:\SoftUni\WebBasics_ExamPreparation\Second exercise\SUS.MvcFramework\obj\Debug\netstandard2.0\SUS.MvcFramework.pdb
