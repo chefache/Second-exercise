@@ -25,7 +25,6 @@ namespace SharedTrip.Data
         public string Email { get; set; }
 
         [Required]
-        [MaxLength(20)]
         public string Password { get; set; }
 
         public virtual IEnumerable<UserTrip> UserTrips { get; set; }
