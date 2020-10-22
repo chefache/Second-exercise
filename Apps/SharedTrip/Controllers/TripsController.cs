@@ -53,12 +53,14 @@ namespace SharedTrip.Controllers
 
         public HttpResponse All()
         {
-            return this.View();
+            var trips = this.services.GetAll();
+            return this.View(trips);
         }
 
-        public HttpResponse Details()
+        public HttpResponse Details(string tripId)
         {
-            return this.View();
+            var trip = this.services.GetDetails(tripId);
+            return this.View(trip);
         }
     }
 }
