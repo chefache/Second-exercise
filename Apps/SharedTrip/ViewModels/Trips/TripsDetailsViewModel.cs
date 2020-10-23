@@ -8,10 +8,9 @@ namespace SharedTrip.ViewModels.Trips
     {
         public string ImagePath { get; set; }
 
-        public string StartingPoint { get; set; }
-
-        public int Seats { get; set; }
 
         public string Description { get; set; }
+
+        public string DepartureTtimeHtmlFormated => this.DepartureTime.ToString("s");
     }
 }

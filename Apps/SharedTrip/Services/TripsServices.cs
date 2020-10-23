@@ -3,6 +3,7 @@ using SharedTrip.ViewModels.Trips;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace SharedTrip.Services
@@ -14,6 +15,44 @@ namespace SharedTrip.Services
         public TripsServices(ApplicationDbContext db)
         {
             this.db = db;
+        }
+
+        public bool HasAvailableSeats(string tripId)
+        {
+            var trip = this.db.Trips.Where(x => x.Id == tripId)
+                 .Select(x => new 
+                 {
+                     x.Seats, TakenSeats = x.UserTrips.Count() 
+                 })
+                 .FirstOrDefault();
+
+            var availableSeats = trip.Seats - trip.TakenSeats;
+            if (availableSeats <= 0 )
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool AddUserToTrip(string userId, string tripId)
+        {
+            var userInTrip = this.db.UserTrips.Any(x => x.UserId == userId && x.TripId == tripId);
+
+            if (userInTrip)
+            {
+                return false;
+            }
+
+            var userTrip = new UserTrip
+            {
+                UserId = userId,
+                TripId = tripId,
+            };
+
+            this.db.UserTrips.Add(userTrip);
+            this.db.SaveChanges();
+            return true;
         }
 
         public void Create(string startPoint, string endPoint, DateTime departureTime, string imagePath, string description, int seats)
@@ -52,9 +91,9 @@ namespace SharedTrip.Services
                 .Select(x => new TripsDetailsViewModel
                 {
                    DepartureTime = x.DepartureTime,
-                   StartingPoint = x.StartPoint,
+                   StartPoint = x.StartPoint,
                    EndPoint = x.EndPoint,
-                   Seats = x.Seats,
+                   AvailableSeats = x.Seats,
                    Description = x.Description,
                    ImagePath = x.ImagePath,
                    Id = x.Id,

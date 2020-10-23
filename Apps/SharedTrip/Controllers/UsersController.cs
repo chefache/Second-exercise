@@ -50,12 +50,12 @@ namespace SharedTrip.Controllers
                 return this.Error("Username shoul be between 5 and 20 characters.");
             }
 
-            if (this.usersServices.IsUsernameAvailable(input.Username))
+            if (!this.usersServices.IsUsernameAvailable(input.Username))
             {
                 return this.Error("Username already exist.");
             }
 
-            if (string.IsNullOrEmpty(input.Email) || !new EmailAddressAttribute().IsValid(input.Email))
+            if (!string.IsNullOrEmpty(input.Email) || !new EmailAddressAttribute().IsValid(input.Email))
             {
                 return this.Error("Invalid email");
             }
