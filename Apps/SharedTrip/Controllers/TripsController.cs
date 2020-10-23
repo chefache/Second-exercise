@@ -77,7 +77,10 @@ namespace SharedTrip.Controllers
             }
 
             var userId = this.GetUserId();
-            this.services.AddUserToTrip(userId, tripId);
+            if (!this.services.AddUserToTrip(userId, tripId))
+            {
+                return this.Redirect("/Trips/Details?tripId=" + tripId);
+            }
 
             return this.Redirect("/Trips/All");
         }
